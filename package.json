@@ -4,6 +4,8 @@
   "description": "Project to learn react",
   "main": "index.js",
   "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\"--quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,8 @@
   },
   "homepage": "https://github.com/mykemk/learn_React#readme",
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
     "prettier": "^2.0.2"
   }
 }
