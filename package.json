@@ -1,0 +1,26 @@
+{
+  "name": "learn_react",
+  "version": "1.0.0",
+  "description": "Project to learn react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mykemk/learn_React.git"
+  },
+  "keywords": [
+    "learn",
+    "react"
+  ],
+  "author": "Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mykemk/learn_React/issues"
+  },
+  "homepage": "https://github.com/mykemk/learn_React#readme",
+  "devDependencies": {
+    "prettier": "^2.0.2"
+  }
+}
