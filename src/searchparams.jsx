@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ANIMALS } from "@frontendmasters/pet";
 //Best Practices while using hooks:
 /**
  * A hook cannot be used in a loop/any control statement
