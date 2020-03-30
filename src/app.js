@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import Pet from "./Pet";
+import { Reach } from "@reach/router";
 import SearchParams from "./searchparams";
 
 const App = () => {
