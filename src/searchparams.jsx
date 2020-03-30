@@ -10,7 +10,8 @@ const SearchParams = () => {
   //assigns values from useState to default and current state
   const [location, setLocation] = useState("Seattle,WA");
   const [animal, setAnimal] = useState("Dog");
-
+  const [breed, setBreed] = useState("");
+  const [breeds, setBreeds] = useState([]);
   return (
     <div className="search-params">
       <h1>{location}</h1>
@@ -39,7 +40,24 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-
+        <label htmlFor="breed">
+          Breed
+          <select
+            id="breed"
+            name="breed"
+            value={breed}
+            onChange={(event) => setBreed(event.target.value)}
+            onBlur={(event) => setBreed(event.target.value)}
+            disabled={breeds.length === 0}
+          >
+            <option>All</option>
+            {breeds.map((breedString) => (
+              <option key={breedString} value={breedString}>
+                {breedString}
+              </option>
+            ))}
+          </select>
+        </label>
         <button>Submit</button>
       </form>
     </div>
