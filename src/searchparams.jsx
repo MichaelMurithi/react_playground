@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { ANIMALS } from "@frontendmasters/pet";
+import React, { useState, useEffect } from "react";
+import pet, { ANIMALS } from "@frontendmasters/pet";
+import useDropdown from "./useDropdown";
 //Best Practices while using hooks:
 /**
  * A hook cannot be used in a loop/any control statement
@@ -9,9 +10,19 @@ import { ANIMALS } from "@frontendmasters/pet";
 const SearchParams = () => {
   //assigns values from useState to default and current state
   const [location, setLocation] = useState("Seattle,WA");
-  const [animal, setAnimal] = useState("Dog");
-  const [breed, setBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
+  const [animal, AnimalDropdown] = useDropdown("Animal", "Dog", ANIMALS);
+  const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
+
+  useEffect(() => {
+    setBreeds([]);
+    setBreed("");
+    pet.breeds(animal).then(({ breeds }) => {
+      const breedStrings = breeds.map(({ name }) => name);
+      setBreeds(breedStrings);
+    }, console.error);
+  }, [animal, setBreeds, setBreed]);
+
   return (
     <div className="search-params">
       <h1>{location}</h1>
@@ -26,38 +37,8 @@ const SearchParams = () => {
             onChange={(event) => setLocation(event.target.value)}
           ></input>
         </label>
-        <label htmlFor="Animal">
-          Animal
-          <select
-            id="animal"
-            name="animal"
-            value={animal}
-            onChange={(event) => setAnimal(event.target.value)}
-          >
-            <option>All</option>
-            {ANIMALS.map((animal) => (
-              <option value={animal}>{animal}</option>
-            ))}
-          </select>
-        </label>
-        <label htmlFor="breed">
-          Breed
-          <select
-            id="breed"
-            name="breed"
-            value={breed}
-            onChange={(event) => setBreed(event.target.value)}
-            onBlur={(event) => setBreed(event.target.value)}
-            disabled={breeds.length === 0}
-          >
-            <option>All</option>
-            {breeds.map((breedString) => (
-              <option key={breedString} value={breedString}>
-                {breedString}
-              </option>
-            ))}
-          </select>
-        </label>
+        <AnimalDropdown />
+        <BreedDropdown />
         <button>Submit</button>
       </form>
     </div>
