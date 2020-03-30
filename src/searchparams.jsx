@@ -5,11 +5,12 @@ import { ANIMALS } from "@frontendmasters/pet";
  * A hook cannot be used in a loop/any control statement
  *
  */
-
 //creates the search component
 const SearchParams = () => {
   //assigns values from useState to default and current state
   const [location, setLocation] = useState("Seattle,WA");
+  const [animal, setAnimal] = useState("Dog");
+
   return (
     <div className="search-params">
       <h1>{location}</h1>
@@ -24,6 +25,21 @@ const SearchParams = () => {
             onChange={(event) => setLocation(event.target.value)}
           ></input>
         </label>
+        <label htmlFor="Animal">
+          Animal
+          <select
+            id="animal"
+            name="animal"
+            value={animal}
+            onChange={(event) => setAnimal(event.target.value)}
+          >
+            <option>All</option>
+            {ANIMALS.map((animal) => (
+              <option value={animal}>{animal}</option>
+            ))}
+          </select>
+        </label>
+
         <button>Submit</button>
       </form>
     </div>
