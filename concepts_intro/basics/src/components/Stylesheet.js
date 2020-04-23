@@ -1,9 +1,10 @@
 import React from "react";
 import "./myStyles.css"; //Imports the stylesheet
-function Stylesheet() {
+function Stylesheet(props) {
+  let className = props.primary ? "primary" : " "; //Styles the component as of class primary based on parameters given
   return (
     <div>
-      <h1 className="primary">Stylesheets</h1>
+      <h1 className={className}>Stylesheets</h1>
     </div>
   );
 }
