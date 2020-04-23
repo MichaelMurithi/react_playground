@@ -34,7 +34,7 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>Username:</label>
+        <label>Username:</label>x
         <input 
         type='text'
         value = {this.state.username}
