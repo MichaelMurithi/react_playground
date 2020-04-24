@@ -22,19 +22,12 @@ import FRParent from "./components/FRParent";
 import Modal from "./components/Modal";
 import Errors from "./components/Errors";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/ClickCounter";
 
 function App() {
   return (
     <div className="App">
-      <ErrorBoundary>
-        <Errors name="Myke" />
-      </ErrorBoundary>
-      <ErrorBoundary>
-        <Errors name="John" />
-      </ErrorBoundary>
-      <ErrorBoundary>
-        <Errors name="Joker" />
-      </ErrorBoundary>
+      <ClickCounter />
     </div>
   );
 }
