@@ -15,11 +15,12 @@ import styles from "./appStyles.module.css"; //css module importation
 import Form from "./components/Form";
 import LifecycleA from "./components/LifecycleA";
 import FragmentsDemo from "./components/FragmentsDemo";
+import MemoComponent from "./components/MemoComponent";
 
 function App() {
   return (
     <div className="App">
-      <FragmentsDemo />
+      <MemoComponent name="Myke" />
     </div>
   );
 }
