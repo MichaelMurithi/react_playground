@@ -17,11 +17,12 @@ import LifecycleA from "./components/LifecycleA";
 import FragmentsDemo from "./components/FragmentsDemo";
 import MemoComponent from "./components/MemoComponent";
 import RefsPractice from "./components/RefsPrac";
+import FocusInput from "./components/FocusInput";
 
 function App() {
   return (
     <div className="App">
-      <RefsPractice />
+      <FocusInput />
     </div>
   );
 }
