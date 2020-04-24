@@ -19,6 +19,7 @@ const UpdateComponent = (OriginalComponent) => {
         <OriginalComponent
           increamentCount={this.increamentCount}
           count={this.state.count}
+          {...this.props}
         />
       );
     }
