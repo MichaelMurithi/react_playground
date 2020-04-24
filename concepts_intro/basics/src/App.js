@@ -16,11 +16,12 @@ import Form from "./components/Form";
 import LifecycleA from "./components/LifecycleA";
 import FragmentsDemo from "./components/FragmentsDemo";
 import MemoComponent from "./components/MemoComponent";
+import RefsPractice from "./components/RefsPrac";
 
 function App() {
   return (
     <div className="App">
-      <MemoComponent name="Myke" />
+      <RefsPractice />
     </div>
   );
 }
