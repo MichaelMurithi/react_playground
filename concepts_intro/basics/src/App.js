@@ -20,11 +20,21 @@ import RefsPractice from "./components/RefsPrac";
 import FocusInput from "./components/FocusInput";
 import FRParent from "./components/FRParent";
 import Modal from "./components/Modal";
+import Errors from "./components/Errors";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <div className="App">
-      <Modal />
+      <ErrorBoundary>
+        <Errors name="Myke" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Errors name="John" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Errors name="Joker" />
+      </ErrorBoundary>
     </div>
   );
 }
