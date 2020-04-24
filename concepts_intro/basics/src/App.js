@@ -18,11 +18,12 @@ import FragmentsDemo from "./components/FragmentsDemo";
 import MemoComponent from "./components/MemoComponent";
 import RefsPractice from "./components/RefsPrac";
 import FocusInput from "./components/FocusInput";
+import FRParent from "./components/FRParent";
 
 function App() {
   return (
     <div className="App">
-      <FocusInput />
+      <FRParent />
     </div>
   );
 }
