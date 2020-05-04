@@ -23,11 +23,13 @@ import Modal from "./components/Modal";
 import Errors from "./components/Errors";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ClickCounter from "./components/ClickCounter";
+import PostList from "./components/PostList";
+import PostForm from "./components/PostForm";
 
 function App() {
   return (
     <div className="App">
-      <ClickCounter />
+      <PostForm />
     </div>
   );
 }
