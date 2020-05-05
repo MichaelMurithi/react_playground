@@ -1,21 +1,7 @@
-import React, { useReducer } from "react";
-
-const initialCount = 0;
-const reducer = (state, action) => {
-  switch (action) {
-    case "increament":
-      return state + 1;
-    case "decreament":
-      return state - 1;
-    case "reset":
-      return initialCount;
-    default:
-      return state;
-  }
-
+import React, { useContext } from "react";
+import { CountContext } from "../../App";
 const MultipleReducers = () => {
-  const [count, dispatch] = useReducer(reducer, initialCount);
-  const [count2,dispatch2] = useReducer(reducer,initialCount)
+  const { count, dispatch } = useContext(CountContext);
   return (
     <div>
       {count}
@@ -23,11 +9,12 @@ const MultipleReducers = () => {
       <button onClick={() => dispatch("increament")}>increament</button>
       <button onClick={() => dispatch("decreament")}>Decreament</button>
       <button onClick={() => dispatch("reset")}>reset</button>
-      {count2}
       <br />
-      <button onClick={() => dispatch2("increament")}>increament</button>
-      <button onClick={() => dispatch2("decreament")}>Decreament</button>
-      <button onClick={() => dispatch2("reset")}>reset</button>
+      {count}
+      <br />
+      <button onClick={() => dispatch("increament")}>increament</button>
+      <button onClick={() => dispatch("decreament")}>Decreament</button>
+      <button onClick={() => dispatch("reset")}>reset</button>
     </div>
   );
 };
