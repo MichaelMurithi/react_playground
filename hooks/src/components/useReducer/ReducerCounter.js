@@ -11,6 +11,7 @@ const reducer = (state, action) => {
       return initialCount;
     default:
       return state;
+    
   }
 
 const ReducerCounter = () => {

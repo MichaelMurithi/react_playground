@@ -1,5 +1,6 @@
 import React, { useReducer, useEffect } from "react";
 import axios from "axios";
+
 const initialState = {
   loading: true,
   error: "",
@@ -26,6 +27,7 @@ const reducer = (state, action) => {
 };
 const DataFetching = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts/1")
