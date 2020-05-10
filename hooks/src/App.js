@@ -1,11 +1,10 @@
 import React, { useReducer } from "react";
 import "./App.css";
-import ManagePerson from "./components/ManagePerson";
-
+import FormFieldArrays from "./hook-form/FormFieldArrays";
 function App() {
   return (
     <div className="App">
-      <ManagePerson />
+      <FormFieldArrays />
     </div>
   );
 }
