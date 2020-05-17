@@ -1,21 +1,23 @@
-import React, { useReducer } from "react";
-import "./App.css";
+import React, { Fragment } from "react";
+import "./components/styles.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Cart from "./components/Cart";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <nav>
-      <h1>Hey React-router!</h1>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="about">About</a>
-        </li>
-        <li>
-          <a href="cart">Cart</a>
-        </li>
-      </ul>
-    </nav>
+    <Fragment>
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/cart" component={Cart} />
+        </Switch>
+      </BrowserRouter>
+    </Fragment>
   );
 }
 export default App;

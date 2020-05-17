@@ -1,5 +1,15 @@
+* {
+  display: none
+}
 nav{
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  flex-flow: column;
+  background-color: lightblue;      
+}
+nav ul li{
+  display:inline-flex;
+  list-style: none;
+  display: none
 }
