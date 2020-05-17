@@ -1,13 +1,21 @@
 import React, { useReducer } from "react";
 import "./App.css";
-import Formwatch from './hook-form/FormWatch'
-import FormFieldArrays from "./hook-form/FormFieldArrays";
-import FormUnregister from "./hook-form/FormUnregister";
 function App() {
   return (
-    <div className="App">
-      <Formwatch/>
-    </div>
+    <nav>
+      <h1>Hey React-router!</h1>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="about">About</a>
+        </li>
+        <li>
+          <a href="cart">Cart</a>
+        </li>
+      </ul>
+    </nav>
   );
 }
 export default App;

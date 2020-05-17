@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "create-react-app": "^3.4.1",
-    "envinfo": "^7.5.1"
+    "envinfo": "^7.5.1",
+    "react-scripts": "^3.4.1"
   },
   "name": "env",
   "description": "A project meant to practice various concepts in react.\r #About\r Creating a pet adoption portal, where one can search for pets from a specified location, and of a particular breed and animal.",
