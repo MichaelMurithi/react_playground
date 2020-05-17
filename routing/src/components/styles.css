@@ -4,11 +4,11 @@
     padding:25px 40px;
     justify-content: space-between      
   }
-  nav ul li{
+  ul li{
     display:inline-block;
     list-style: none;
   }
-  nav li a {
+li a {
       padding: 10px 15px;
       text-decoration: none
   }
