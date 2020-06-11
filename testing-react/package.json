@@ -8,6 +8,12 @@
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.21.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "flow-bin": "^0.126.1",
     "react-scripts": "0.9.5"
   },

@@ -1,0 +1,14 @@
+  nav{
+    display: flex;
+    background-color: lightblue;
+    padding:25px 40px;
+    justify-content: space-between      
+  }
+  ul li{
+    display:inline-block;
+    list-style: none;
+  }
+li a {
+      padding: 10px 15px;
+      text-decoration: none
+  }
