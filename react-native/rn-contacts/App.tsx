@@ -10,7 +10,7 @@ import {Text, View} from '@react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import AppNavContainer from './src/navigations';
 
-const App: () => Node = () => {
+const App = () => {
   return <AppNavContainer></AppNavContainer>;
 };
 export default App;
