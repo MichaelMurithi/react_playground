@@ -3,6 +3,8 @@
     "@react-navigation/native": "^6.0.2",
     "create-react-app": "^1.2.1",
     "envinfo": "^7.5.1",
+    "react-native-safe-area-context": "^3.3.0",
+    "react-native-screens": "^3.5.0",
     "react-scripts": "^1.1.5"
   },
   "name": "env",
