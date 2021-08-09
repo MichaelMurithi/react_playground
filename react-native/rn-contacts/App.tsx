@@ -5,42 +5,12 @@
  * @format
  * @flow strict-local
  */
-
 import React from 'react';
-import type {Node} from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Text, View} from '@react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import AppNavContainer from './src/navigations';
 
 const App: () => Node = () => {
-  return (
-    <SafeAreaView style={styles.sectionContainer}>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Hello React Native!</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return <AppNavContainer></AppNavContainer>;
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    backgroundColor: 'white',
-    color: 'black',
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
 export default App;

@@ -11,6 +11,7 @@
     "clean-android": "cd android && rm -R .gradle && cd app && rm -R build"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.2",
     "react": "^17.0.1",
     "react-native": "^0.64.2",
     "react-native-gesture-handler": "^1.10.3"
