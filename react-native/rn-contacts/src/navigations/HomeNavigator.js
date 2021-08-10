@@ -1,5 +1,5 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {View, Text} from 'react-native';
 
 const Contacts = () => {
@@ -31,9 +31,9 @@ const Settings = () => {
   );
 };
 const HomeNavigator = () => {
-  const HomeStack = createStackNavigator();
+  const HomeStack = createNativeStackNavigator();
   return (
-    <HomeStack.Navigator>
+    <HomeStack.Navigator initialRouteName="Contacts">
       <HomeStack.Screen name="Contacts" component={Contacts} />
       <HomeStack.Screen name="Contact" component={ContactDetail} />
       <HomeStack.Screen name="CreateContact" component={CreateContact} />
